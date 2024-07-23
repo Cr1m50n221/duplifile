@@ -22,7 +22,10 @@ function M.duplicate_file(path)
   local new_buf = vim.api.nvim_get_current_buf()
   vim.api.nvim_buf_set_lines(new_buf, 0, -1, false, lines)
   vim.cmd("write")
-  print("File has been duplicated at: " .. new_path)
+
+  vim.schedule(function()
+    print("File has been duplicated at: " .. new_path)
+  end)
 end
 
 function M.duplicate()
