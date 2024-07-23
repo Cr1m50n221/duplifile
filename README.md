@@ -1,6 +1,7 @@
 This is a simple plugin that allows you to quickly and painlessly duplicate files in Neovim.
 
 ## Video Demonstration
+[Demo video for DupliFile plugin](./video-demo.mkv)
 
 ## Keybinding Options
 
