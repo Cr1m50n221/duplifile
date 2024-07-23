@@ -1,11 +1,11 @@
 This is a simple plugin that allows you to quickly and painlessly duplicate files in Neovim.
 
-### Requirements
----
+## Requirements
+
 [Telescope](https://github.com/nvim-telescope/telescope.nvim) (and its requirements)
 
-### Keybinding Options
----
+## Keybinding Options
+
 | Action | Shortcuts | Description |
 | ------ | --------- | ----------- |
 | DupliFile | \<leader>df | Choose the file to duplicate, pick where to duplicate it, and then name the new file. |
