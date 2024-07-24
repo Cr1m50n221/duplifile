@@ -5,7 +5,7 @@ This is a simple plugin that allows you to quickly and painlessly duplicate file
 
 ## Installation
 ```
-MaxwellPilot/duplifile
+'MaxwellPilot/duplifile'
 ```
 
 Paste this into your package manager of choice.
