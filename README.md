@@ -1,3 +1,5 @@
+### DupliFile
+
 This is a simple plugin that allows you to quickly and painlessly duplicate files in Neovim.
 
 ## Video Demonstration
@@ -7,8 +9,6 @@ This is a simple plugin that allows you to quickly and painlessly duplicate file
 ```lua
 'MaxwellPilot/duplifile'
 ```
-
-Paste this into your package manager of choice.
 
 ## Keybinding Options
 
