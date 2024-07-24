@@ -4,7 +4,9 @@ This is a simple plugin that allows you to quickly and painlessly duplicate file
 [!Demo video for DupliFile plugin](https://github.com/user-attachments/assets/6c95333f-eef6-4195-9537-3644312849a8)
 
 ## Installation
-```MaxwellPilot/duplifile```
+```
+MaxwellPilot/duplifile
+```
 
 Paste this into your package manager of choice.
 
