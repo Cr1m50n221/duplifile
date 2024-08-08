@@ -1,5 +1,19 @@
 local M = {}
 
+-- Default keybindings.
+local default = {
+  duplicate = "<leader>df",
+  duplicate_active = "<leader>da"
+}
+
+M.config = default
+
+-- Allows user to change default keybindings.
+function M.setup(user)
+  M.config = vim.tbl_extend("force", default, user or {})
+end
+
+-- Main function that duplicates files.
 function M.duplicate_file(path)
   vim.cmd('edit ' .. path)
   local buf = vim.api.nvim_get_current_buf()
@@ -28,6 +42,7 @@ function M.duplicate_file(path)
   end)
 end
 
+-- Duplicates the file chosen by the user. Requires telescope.
 function M.duplicate()
   local telescope = require('telescope.builtin')
   telescope.find_files({
@@ -43,10 +58,12 @@ function M.duplicate()
   })
 end
 
+-- Duplicates the current file.
 function M.duplicate_active()
   M.duplicate_file(vim.api.nvim_buf_get_name(0))
 end
 
+-- Create "DupliFile" command.
 vim.api.nvim_create_user_command(
   "DupliFile",
   function()
@@ -55,6 +72,7 @@ vim.api.nvim_create_user_command(
   { nargs = 0 }
 )
 
+-- Create "DupliFileActive" command.
 vim.api.nvim_create_user_command(
   "DupliFileActive",
   function()
@@ -63,7 +81,12 @@ vim.api.nvim_create_user_command(
   { nargs = 0 }
 )
 
-vim.api.nvim_set_keymap('n', '<leader>df', ':DupliFile<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>da', ':DupliFileActive<CR>', { noremap = true, silent = true })
+-- Plugin keybindings.
+function M.keybindings()
+  vim.api.nvim_set_keymap('n', M.config.duplicate, ':DupliFile<CR>', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('n', M.config.duplicate_active, ':DupliFileActive<CR>', { noremap = true, silent = true })
+end
+
+M.keybindings()
 
 return M
