@@ -7,7 +7,7 @@ This is a simple plugin that allows you to quickly and painlessly duplicate file
 
 ## Installation
 ```lua
-'MaxwellPilot/duplifile'
+'Cr1m50n221/duplifile'
 ```
 
 ## Keybinding Options
@@ -17,4 +17,4 @@ This is a simple plugin that allows you to quickly and painlessly duplicate file
 | `:DupliFile` | `<leader>df` | <ol><li>Choose the file to duplicate (Requires [Telescope](https://github.com/nvim-telescope/telescope.nvim))</li> <li>Pick where to duplicate it</li> <li>Name the new file</li></ol> |
 | `DupliFileActive` | `<leader>da` | <ol><li>Pick where to duplicate the active file</li> <li>Name the new file.</li></ol> |
 
-The directory you want duplicate to will default to the one you are currently in. The file extension will be added to the end of the file by default as well (i.e., no need to add ".lua" to the end of the file name).
+The directory you want to duplicate to will default to the one you are currently in. The file extension will be added to the end of the file by default as well (i.e., no need to add ".lua" to the end of the file name).
